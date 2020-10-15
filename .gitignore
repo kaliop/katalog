@@ -1,0 +1,9 @@
+/main/node_modules
+/twig/node_modules
+/vue/node_modules
+
+/main/storybook-static
+/twig/storybook-static
+/vue/storybook-static
+
+.idea

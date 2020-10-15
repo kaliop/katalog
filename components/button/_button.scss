@@ -1,0 +1,34 @@
+$color-orange: #e94e1b;
+
+.Btn {
+  cursor: pointer;
+  display: inline-block;
+  min-width: 160px;
+  padding: 15px 20px;
+  background: $color-orange;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 600;
+  text-align: center;
+  transition: .25s all;
+
+  &:hover {
+    background-color: #FFF;
+    color: $color-orange;
+    border: 1px solid $color-orange;
+  }
+}
+
+.Btn--inverted {
+  background-color: #FFF;
+  color: $color-orange;
+  border: 1px solid $color-orange;
+
+  &:hover {
+    background-color: $color-orange;
+    color: #FFF;
+    border: 1px solid transparent;
+  }
+}
