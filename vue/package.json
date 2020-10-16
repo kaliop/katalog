@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "start-storybook -p 6007",
     "storybook": "npm run build-storybook && npx sb extract && start-storybook -p 6007 -s ./storybook-static",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook && npx sb extract"
   },
   "keywords": [],
   "author": "",
