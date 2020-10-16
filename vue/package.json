@@ -1,5 +1,5 @@
 {
-  "name": "vue",
+  "name": "vue-project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -24,6 +24,8 @@
   "dependencies": {
     "sass": "^1.27.0",
     "sass-loader": "^10.0.3",
-    "vue-loader": "^15.9.3"
+    "vue": "^2.6.12",
+    "vue-loader": "^15.9.3",
+    "vue-template-compiler": "^2.6.12"
   }
 }
