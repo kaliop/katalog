@@ -10,11 +10,11 @@ module.exports = {
   refs: {
     vue: {
       title: 'vue',
-      url: 'http://localhost:6007',
+      url: 'https://kaliop-storybook-vue.netlify.app',
     },
     twig: {
       title: 'twig',
-      url: 'http://localhost:6008',
+      url: 'https://kaliop-storybook-twig.netlify.app',
     },
   }
 }
