@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = ({ config }) => {
   config.module.rules.push({
     test: /\.s[ac]ss$/i,
@@ -12,7 +14,7 @@ module.exports = ({ config }) => {
   });
 
   // We add an alias to import components from parent
-  config.resolve.alias['@components'] = '/home/asavoie/www/katalog/components'
+  config.resolve.alias['@components'] = path.resolve(__dirname, '../../components')
 
   return config;
 };
