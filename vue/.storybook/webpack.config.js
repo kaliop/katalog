@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = ({ config }) => {
   config.module.rules.push({
     test: /\.s[ac]ss$/i,
@@ -10,6 +12,9 @@ module.exports = ({ config }) => {
       'sass-loader',
     ],
   });
+
+  // We add an alias to import components from parent
+  config.resolve.alias['@components'] = path.resolve(__dirname, '../../components')
 
   return config;
 };
