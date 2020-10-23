@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = ({ config }) => {
   config.module.rules.push({
     test: /\.twig$/,
@@ -15,6 +17,12 @@ module.exports = ({ config }) => {
       'sass-loader',
     ],
   });
+
+  // We add an alias to import components from parent
+  config.resolve.alias['@components'] = '/home/asavoie/www/katalog/components'
+
+  // To enable twig loader in parent component directory
+  config.resolve.modules = [path.resolve(__dirname, '../node_modules')]
 
   return config;
 };

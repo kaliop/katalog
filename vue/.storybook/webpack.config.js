@@ -11,5 +11,8 @@ module.exports = ({ config }) => {
     ],
   });
 
+  // We add an alias to import components from parent
+  config.resolve.alias['@components'] = '/home/asavoie/www/katalog/components'
+
   return config;
 };

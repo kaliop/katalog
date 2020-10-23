@@ -1,4 +1,5 @@
-import Button from './Button.vue';
+// import Button from './Button.vue';
+import Button from '@components/button/Button.vue';
 
 export default {
   title: 'Button',
