@@ -32,3 +32,16 @@ $color-orange: #e94e1b;
     border: 1px solid transparent;
   }
 }
+
+.Btn--underline {
+  border: none;
+  min-width: 0;
+  padding: 0;
+  background-color: transparent;
+  color: $color-orange;
+
+  &:hover {
+    text-decoration: underline;
+    border: none;
+  }
+}

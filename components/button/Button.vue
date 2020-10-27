@@ -1,5 +1,7 @@
 <template>
-  <button type="button">Click me ! -- Vue</button>
+  <button class="Btn" type="button">
+    {{ label }}
+  </button>
 </template>
 
 <script>
