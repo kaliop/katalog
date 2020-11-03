@@ -25,6 +25,7 @@
     "@storybook/addon-knobs": "^6.0.26",
     "sass": "^1.27.0",
     "sass-loader": "^10.0.3",
+    "sass-mq-build": "^1.0.0",
     "sb": "^6.0.26",
     "storybook-addon-preview": "^2.0.1",
     "vue": "^2.6.12",
