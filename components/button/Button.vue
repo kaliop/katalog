@@ -9,5 +9,11 @@ import '@components/button/_button.scss';
 
 export default {
   name: 'Button',
+  props: {
+    label: {
+      type: String,
+      default: ''
+    }
+  }
 }
 </script>
