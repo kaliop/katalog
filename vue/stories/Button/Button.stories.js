@@ -15,8 +15,8 @@ const CustomclassesOptions = {
 
 const Template = (args, { argTypes }) => ({
   props: {
-    label: { 
-      default: text('Label', 'Hello Storybook') 
+    label: {
+      default: text('Label', 'Hello Storybook')
     },
     customClasses: {
       default: optionsKnob('CSS Modifiers', CustomclassesOptions, '', { display: 'multi-select' })
