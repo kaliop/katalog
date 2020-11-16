@@ -1,4 +1,7 @@
+# Katalog Storybook documentation
+
 ## Install dependencies
+
 In twig vue, and main, install dependencies :
 
 ```bash
@@ -8,53 +11,83 @@ npm install
 ## Build in local to see main storybook
 
 Launch the twig storybook :
+
 ```bash
-cd twig && npm run storybook 
+cd twig && npm run storybook
 ```
 
 Launch the vue storybook :
+
 ```bash
-cd vue && npm run storybook 
+cd vue && npm run storybook
 ```
 
 Wait for the launch on previous storybooks.
 Launch the main storybook :
+
 ```bash
-cd main && npm run storybook 
+cd main && npm run storybook
 ```
 
 ## Launch for dev
 
 Launch the twig storybook :
+
 ```bash
-cd twig 
-npm run dev 
+cd twig
+npm run dev
 ```
 
 Launch the vue storybook :
+
 ```bash
-cd vue 
-npm run dev 
+cd vue
+npm run dev
 ```
 
 Wait for the launch on previous storybooks.
 Launch the main storybook :
-```bash
-cd main 
-npm run storybook 
-```
 
+```bash
+cd main
+npm run storybook
+```
 
 ## How to add a component
 
-Create a new directory with the component's name under the target storybook 'stories' dir (vue/stories or twig/stories or both) 
+All components live in the `components/` folder.
+Create a new directory in it with the component's name and create the file for:
 
-For twig, add two files :
-   - {COMPONENT}.html.twig : contain the twig code or your component
-   - {COMPONENT}.stories.js : contain the stories definition of your component (https://storybook.js.org/docs/react/writing-stories/introduction)
+- {COMPONENT}.html.twig : Contain the twig template
+- {COMPONENT}.vue : Contain the Vue template
+- {COMPONENT}.scss : contain de scss style for the component
 
-For vue.js, add two files :
-   - {COMPONENT}.vue : contain the vue code or your component
-   - {COMPONENT}.stories.js : contain the stories definition of your component (https://storybook.js.org/docs/react/writing-stories/introduction)
-   
-Then, add the css component in components/{COMPONENT}/_{COMPONENT}.scss
+Then, create a story for your component in the different storybook
+
+For Twig:
+
+- twig/stories/{COMPONENT}/{COMPONENT}.stories.js
+
+For Vue:
+
+- vue/stories/{COMPONENT}/{COMPONENT}.stories.js
+
+## How to write a story ?
+
+Read the doc here : https://storybook.js.org/docs/react/writing-stories/introduction
+
+Begin with a `Default` story which is the main entrance for your component. It should display the default state.
+
+You can add multiple variant story to show special state if you want with prebuild data variant (example: in the `Button` component, we have an `Inverted` story to show the inverted state of the button)
+
+You can have an example in the `Button` story.
+
+## Knobs
+
+Knobs is a storybook add-on which let us create dynamic field to test our composant with different data.
+You can see all the available fields here: https://github.com/storybookjs/storybook/tree/master/addons/knobs#available-knobs
+
+## Tips
+
+- Avoid static text in your story. Pass all your data in props to manage it with Knobs
+- All the CSS classes is managed by a `multi-select` knobs field, named `CSS Modifiers`. It allow us to add css variant on the go.
