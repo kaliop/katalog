@@ -16,11 +16,19 @@ module.exports = ({ config }) => {
           additionalData: `@import "${stylePath}/config/_index.scss";`
         }
       }
-    ],
-  });
+    ]
+  })
 
   // We add an alias to import components from parent
-  config.resolve.alias['@components'] = path.resolve(__dirname, '../../components')
-  
-  return config;
-};
+  config.resolve.alias['@components'] = path.resolve(
+    __dirname,
+    '../../components'
+  )
+  config.resolve.alias['core-js/modules'] = path.resolve(
+    __dirname,
+    '..',
+    'node_modules/core-js/modules'
+  )
+
+  return config
+}
