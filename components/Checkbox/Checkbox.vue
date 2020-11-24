@@ -1,8 +1,6 @@
 <template>
   <div>
-    <label class="Checkbox" :class="{ 'Checkbox-checked': checked }">
-      <span v-if="checked">x</span>
-      <span v-else>o</span>
+    <label class="Checkbox">
       <input
         type="checkbox"
         :name="name"
@@ -10,6 +8,7 @@
         :checked="checked"
         @change="change"
       />
+      <span class="Checkbox-check"></span>
       <span>{{ label }}</span>
     </label>
   </div>

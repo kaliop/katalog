@@ -1,27 +1,20 @@
 import TextField from '@components/TextField/TextField.vue'
-import { withKnobs, text } from '@storybook/addon-knobs'
 
 export default {
   title: 'TextField',
-  component: TextField,
-  decorator: [withKnobs]
+  component: TextField
 }
 
 const Template = (args, { argTypes }) => ({
   props: {
-    label: {
-      default: text('Label', 'Firstname')
-    }
-  },
-  computed: {
-    componentProps() {
-      return {
-        label: this.label
-      }
-    }
+    textFieldLabel: String
   },
   components: { TextField },
-  template: '<text-field :label="componentProps.label" />'
+  template: '<text-field :label="textFieldLabel" />'
 })
 
 export const Default = Template.bind({})
+
+Default.args = {
+  textFieldLabel: 'Label'
+}
