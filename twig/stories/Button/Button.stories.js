@@ -1,5 +1,4 @@
-import { storiesOf } from '@storybook/html'
-import { withKnobs, text, optionsKnob } from '@storybook/addon-knobs'
+// import { storiesOf } from '@storybook/html'
 import Button from '@components/button/Button.html.twig'
 import '@components/button/_button.scss'
 
@@ -8,18 +7,24 @@ const CustomclassesOptions = {
   'Btn--inverted': 'Btn--inverted'
 }
 
-const stories = storiesOf('Button', module)
-stories.addDecorator(withKnobs)
-stories.add('Default', () =>
+export default {
+  component: Button,
+  title: 'Button'
+}
+
+export const Default = () =>
   Button({
-    customClasses: { default: optionsKnob('CSS Modifiers', CustomclassesOptions, '', { display: 'multi-select' }), },
-    label: text('label', 'Hello from twig !'),
+    label: 'Button'
   })
-)
-stories.add('Inverted', () =>
+
+export const Inverted = () =>
   Button({
-    classes: 'Btn Btn--inverted',
-    customClasses: { default: optionsKnob('CSS Modifiers', CustomclassesOptions, '', { display: 'multi-select' }), },
-    label: text('label', 'Hello from twig !')
+    customClasses: 'Btn--inverted',
+    label: 'Button'
   })
-)
+
+export const Underline = () =>
+  Button({
+    customClasses: 'Btn--underline',
+    label: 'Button'
+  })
