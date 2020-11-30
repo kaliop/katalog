@@ -1,16 +1,15 @@
 <template>
   <div>
-    <label class="Radio" :class="{ 'Radio-selected': checked }">
-      <span v-if="checked">x</span>
-      <span v-else>o</span>
+    <label class="Radio">
       <span>{{ label }}</span>
       <input
         type="radio"
         :name="name"
         :value="value"
         :checked="checked"
-        @change="$emit('change', $event.target.value)"
+        @change="change"
       />
+      <span class="Radio-check"></span>
     </label>
   </div>
 </template>
@@ -31,6 +30,11 @@ export default {
   computed: {
     checked() {
       return this.modelValue === this.value
+    }
+  },
+  methods: {
+    change(event) {
+      this.$emit('change', event.target.value)
     }
   }
 }

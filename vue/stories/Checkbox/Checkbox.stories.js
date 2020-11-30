@@ -1,50 +1,57 @@
 import Checkbox from '@components/Checkbox/Checkbox.vue'
-import { withKnobs, text } from '@storybook/addon-knobs'
 
 export default {
   title: 'Checkbox',
-  component: Checkbox,
-  decorator: [withKnobs]
+  component: Checkbox
 }
 
-const Template = (args, { argTypes }) => ({
+// default (boolean)
+const BooleanStory = (args) => ({
   props: {
-    checkboxLabel1: {
-      default: text('Label checkbox 1', 'Option 1')
-    },
-    checkboxLabel2: {
-      default: text('Label checkbox 2', 'Option 2')
-    },
-    checkboxLabel3: {
-      default: text('Label checkbox 3', 'Terms agreement')
-    }
+    checkboxLabel: String
   },
   data() {
     return {
-      options: [],
       consent: false
     }
   },
-  computed: {
-    componentProps() {
-      return {
-        checkboxLabel1: this.checkboxLabel1,
-        checkboxLabel2: this.checkboxLabel2,
-        checkboxLabel3: this.checkboxLabel3
-      }
+  components: { Checkbox },
+  template: `
+  <div>
+    <checkbox v-model="consent" :label="checkboxLabel" />
+    <span>Value: {{ JSON.stringify(consent) }}</span>
+  </div>`
+})
+
+export const Default = BooleanStory.bind({})
+
+Default.args = {
+  checkboxLabel: 'toto'
+}
+
+// // default (array)
+const ArrayStory = (args) => ({
+  props: {
+    checkboxLabel1: String,
+    checkboxLabel2: String
+  },
+  data() {
+    return {
+      options: []
     }
   },
   components: { Checkbox },
   template: `
     <div>
-        <h2>Pick your options (array of options)</h2>
-        <checkbox v-model="options" value="opt1" :label="componentProps.checkboxLabel1" />
-        <checkbox v-model="options" value="opt2" :label="componentProps.checkboxLabel2" />
-        <hr />
-        <h2>Terms agreement (boolean)</h2>
-        <checkbox v-model="consent" :label="componentProps.checkboxLabel3" />
+      <checkbox v-model="options" value="option1" :label="checkboxLabel1" />
+      <checkbox v-model="options" value="option2" :label="checkboxLabel2" />
+      <span>Value: {{JSON.stringify(options)}}</span>
     </div>
-    `
+  `
 })
+export const Array = ArrayStory.bind({})
 
-export const Default = Template.bind({})
+Array.args = {
+  checkboxLabel1: 'Option 1',
+  checkboxLabel2: 'Option 2'
+}

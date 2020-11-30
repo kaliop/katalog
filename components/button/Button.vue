@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import '@components/button/_button.scss';
+import '@components/button/_button.scss'
 
 export default {
   name: 'Button',

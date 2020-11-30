@@ -1,12 +1,7 @@
 <template>
-  <div>
-    <label>{{ label }}</label>
-    <input
-      class="TextField"
-      type="text"
-      :value="value"
-      @input="$emit('input', $event.target.value)"
-    />
+  <div class="TextField">
+    <label class="TextField-label">{{ label }}</label>
+    <input class="TextField-input" type="text" :value="value" @input="input" />
   </div>
 </template>
 
@@ -15,6 +10,11 @@ export default {
   props: {
     value: String,
     label: String
+  },
+  methods: {
+    input(event) {
+      this.$emit('input', event.target.value)
+    }
   }
 }
 </script>
