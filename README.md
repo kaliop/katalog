@@ -72,8 +72,6 @@ For Vue:
 
 - vue/stories/{COMPONENT}/{COMPONENT}.stories.js
 
-Don't forget to import the stylesheet in `styles/index.scss`
-
 ## How to write a story ?
 
 Read the doc here : https://storybook.js.org/docs/react/writing-stories/introduction
