@@ -86,7 +86,10 @@ You can have an example in the `Button` story.
 
 ## Controls
 
-You can use Controls to ad different customisable fields on your story. It can be text, color picker or select for example. Use it to extend customisation on your components to see different edge case and help people to see if it is convenient for their project. See the doc here for more information and a list of all possible field: https://storybook.js.org/docs/react/essentials/controls
+You can use Controls to ad different customisable fields on your story. It can be text, color picker or select for example. Use it to extend customisation on your components to see different edge case and help people to see if it is convenient for their project.
+See the doc here for more information and a list of all possible field: https://storybook.js.org/docs/react/essentials/controls
+
+Attention ! Controls is **not** available for twig components for now !
 
 ## Tips
 
