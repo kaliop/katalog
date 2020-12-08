@@ -72,6 +72,8 @@ For Vue:
 
 - vue/stories/{COMPONENT}/{COMPONENT}.stories.js
 
+Don't forget to import the stylesheet in `styles/index.scss`
+
 ## How to write a story ?
 
 Read the doc here : https://storybook.js.org/docs/react/writing-stories/introduction
@@ -82,10 +84,9 @@ You can add multiple variant story to show special state if you want with prebui
 
 You can have an example in the `Button` story.
 
-## Knobs
+## Controls
 
-Knobs is a storybook add-on which let us create dynamic field to test our composant with different data.
-You can see all the available fields here: https://github.com/storybookjs/storybook/tree/master/addons/knobs#available-knobs
+You can use Controls to ad different customisable fields on your story. It can be text, color picker or select for example. Use it to extend customisation on your components to see different edge case and help people to see if it is convenient for their project. See the doc here for more information and a list of all possible field: https://storybook.js.org/docs/react/essentials/controls
 
 ## Tips
 
