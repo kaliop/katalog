@@ -1,6 +1,6 @@
 // import { storiesOf } from '@storybook/html'
-import Button from '@components/button/Button.html.twig'
-import '@components/button/_button.scss'
+import Button from '@components/Button/Button.html.twig'
+import '@components/Button/_button.scss'
 
 const CustomclassesOptions = {
   'Btn--underline': 'Btn--underline',
